@@ -5,7 +5,7 @@
 #
 # NDBS Version 0.0
 
-# Indexen:
+# Indexes:
 
 # Klant ID: check module connections
 # Device ID: check module connections
