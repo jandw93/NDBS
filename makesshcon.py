@@ -1,7 +1,9 @@
 # Module makesshcon
 
 import paramiko, time, os
-from connections, logging, commandos import *
+from connections import *
+from logging import *
+from commandos import *
 
 def runbck(klantID,deviceID,typeID,locationID,jobID):
 
