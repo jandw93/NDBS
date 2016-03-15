@@ -1,3 +1,4 @@
+# NDBS 16.0
 # Module commandos
 
 from ftpsettings import *
@@ -21,11 +22,11 @@ list = [
 ['']
 ]
 
-def command(klantID,deviceID,typeID,locationID,listID):
+def command(customerID,deviceID,typeID,locationID,listID):
     # Commands containing ftp connection details
-    list[0][1] = list[0][1] + '{}:{}@{}{}klant{}-device{}-{}-software'.format(get(klantID,locationID,2),get(klantID,locationID,3),get(klantID,locationID,0),get(klantID,locationID,1),klantID,deviceID,date)
-    list[0][2] = list[0][2] + '{}:{}@{}{}klant{}device{}-{}-config'.format(get(klantID,locationID,2),get(klantID,locationID,3),get(klantID,locationID,0),get(klantID,locationID,1),klantID,deviceID,date)
-    list[0][3] = list[0][3] + '{}:{}@{}{}klant{}device{}-{}-vlan_dat'.format(get(klantID,locationID,2),get(klantID,locationID,3),get(klantID,locationID,0),get(klantID,locationID,1),klantID,deviceID,date)
+    list[0][1] = list[0][1] + '{}:{}@{}{}customer{}-device{}-{}-software'.format(get(customerID,locationID,2),get(customerID,locationID,3),get(customerID,locationID,0),get(customerID,locationID,1),customerID,deviceID,date)
+    list[0][2] = list[0][2] + '{}:{}@{}{}customer{}device{}-{}-config'.format(get(customerID,locationID,2),get(customerID,locationID,3),get(customerID,locationID,0),get(customerID,locationID,1),customerID,deviceID,date)
+    list[0][3] = list[0][3] + '{}:{}@{}{}customer{}device{}-{}-vlan_dat'.format(get(customerID,locationID,2),get(customerID,locationID,3),get(customerID,locationID,0),get(customerID,locationID,1),customerID,deviceID,date)
     return list[typeID][listID]
 
 def commandlist(typeID):

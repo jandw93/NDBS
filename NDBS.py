@@ -3,16 +3,16 @@
 # Copyright 2016 DNA SERVICES B.V.
 # Written by Jan de Witte
 #
-# NDBS Version 0.0
+# NDBS 16 Version 0
 
 # Indexes:
 
-# Klant ID: check module connections
+# Customer ID: check module connections
 # Device ID: check module connections
 # Type ID: check module commandos
 # Backup location ID: check module ftpsettings
-# Job ID: define as the fifth value in bck.runbck(x,x,x,x,x)
+# Job ID: define as the fifth value in bck(x,x,x,x,x)
 
-import makesshcon as bck
+from main import *
 
-bck.runbck(0,0,0,0,1)
+bck(0,0,0,0,'Job #0001')

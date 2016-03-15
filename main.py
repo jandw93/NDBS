@@ -1,3 +1,4 @@
+# NDBS 16.0
 # Module makesshcon
 
 import paramiko, time, os
@@ -5,12 +6,12 @@ from connections import *
 from logging import *
 from commandos import *
 
-def runbck(klantID,deviceID,typeID,locationID,jobID):
+def bck(customerID,deviceID,typeID,locationID,jobID):
 
-    IP = device(klantID,deviceID,3,jobID)
-    USN = device(klantID,deviceID,4,jobID)
-    PWD = device(klantID,deviceID,5,jobID)
-    ENDSW = device(klantID,deviceID,6,jobID)
+    IP = device(customerID,deviceID,3,jobID)
+    USN = device(customerID,deviceID,4,jobID)
+    PWD = device(customerID,deviceID,5,jobID)
+    ENDSW = device(customer,deviceID,6,jobID)
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -44,7 +45,7 @@ def runbck(klantID,deviceID,typeID,locationID,jobID):
                 createlog(0,jobID)
                 channel.send('exit')
 
-            channel.send(command(klantID,deviceID,typeID,locationID,number))
+            channel.send(command(customerID,deviceID,typeID,locationID,number))
             channel.send('\n')
 
         # datacheck function comes here

@@ -1,11 +1,12 @@
+# NDBS 16.0
 # Module ftpsettings
 
 from logging import *
 
-# Klant ID
+# Customer ID
 # Location ID
 # FTP Host
-# File path
+# File Path
 # FTP User
 # FTP Password
 
@@ -20,9 +21,9 @@ settings = [
 ]
 ]
 
-def get(klantID,locationID,listID):
+def get(customerID,locationID,listID):
     for i in range(len(settings)):
-        if settings[i][0] == klantID and settings[i][1] == locationID:
+        if settings[i][0] == customerID and settings[i][1] == locationID:
             result = settings[i][listID]
         else:
             result = 'error'
